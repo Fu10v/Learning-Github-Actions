@@ -29,6 +29,8 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
       - name: Add status badge to README if not exists
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -41,7 +43,7 @@ jobs:
             git config --global user.email "github-actions[bot]@users.noreply.github.com"
             git add README.md
             git commit -m "docs: add workflow status badge to README"
-            git push
+            git push origin HEAD:${{ github.head_ref }}
           else
             echo "Badge already exists in README.md. Skipping update."
           fi
