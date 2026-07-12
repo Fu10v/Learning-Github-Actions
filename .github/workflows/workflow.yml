@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI echo_action
+name: CI tests
 
 # Controls when the workflow will run
 on:
@@ -38,7 +38,7 @@ jobs:
 
       # Run the tests with pytest and fail the workflow if coverage is below 70%
       - name: Run tests
-        run: pytest --cov=myapp --cov-fail-under=70 --cov-report=xml
+        run: python -m pytest --cov=myapp --cov-fail-under=70 --cov-report=xml
 
       # Upload a coverage report as an artifact for inspection
       - name: Upload coverage report
