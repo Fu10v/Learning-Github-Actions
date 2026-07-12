@@ -35,7 +35,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          BADGE="![Workflow Status](https://github.com/${{ github.repository }}/actions/workflows/workflow.yml/badge.svg?branch=develop)"
+          BADGE="![Workflow Status](https://github.com/${{ github.repository }}/actions/workflows/workflow.yml/badge.svg)"
           if ! grep -q "badge.svg" README.md; then
             echo "There is no badge. Add it to the beginning of the file..."
             echo -e "$BADGE\n\n$(cat README.md)" > README.md
