@@ -29,6 +29,8 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref }}
       - name: Add status badge to README if not exists
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
