@@ -1,4 +1,4 @@
-![Workflow Status](https://github.com/Fu10v/Learning-Github-Actions/actions/workflows/task1.yml/badge.svg)
+![Workflow Status](https://github.com/Fu10v/Learning-Github-Actions/actions/workflows/workflow.yml/badge.svg)
 
 # Learning-Github-Actions
 This repository was created for learning Github Actions.
